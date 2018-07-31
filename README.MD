@@ -1,6 +1,7 @@
 
 ##### Download aws keypair file
 
+You can generate and download keypair this [way.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html)
 
 ##### Edit group_vars/all.yml
 
@@ -19,7 +20,7 @@ ec2_vpc_id: "" #change this to your ec2_vpc_id
 ##### For Ubuntu 16.04 install and configure ansible like this
 
 ```
-apt-get -y install python3-pip openssl libssl-dev
+apt get update && apt-get -y install python3-pip openssl libssl-dev
 pip3 install ansible
 pip3 install --upgrade cryptography
 ```
