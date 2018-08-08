@@ -17,6 +17,7 @@
     name: mongod
     enabled: yes
     masked: no
+
 - name: start mongodb service
   systemd: state=started name=mongod
 - name: Install the pymongo module
