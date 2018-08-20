@@ -109,6 +109,11 @@
     dest: /home/swifty/clone/.shared/swifty.demo
     version: master
 
+- name: copy mime.types files
+  copy:
+    src: mime.types
+    dest: /etc/swifty/conf/mime.types
+
 - name: docker run gate
   shell: docker run -d --net=host --name=swygate --restart always -v /home/swifty/clone:/home/swifty/clone -v /home/swifty-volume:/home/swifty-volume -v /etc/swifty:/etc/swifty -v /root/.swysecrets:/root/.swysecrets swiftycloudou/gate
 
