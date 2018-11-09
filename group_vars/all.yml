@@ -1,0 +1,46 @@
+# ansible
+
+ansible_ssh_user: fedora
+ansible_ssh_private_key_file: ./ansible.pem
+
+# Kubernetes
+
+token: c9f7b8.8d17974y63l7g85s
+pod_network_cidr: "10.244.0.0/16"
+
+# passwords
+
+mariadb_root_password: random password
+mariadb_keystone_password: random password
+mongodb_admin_password: random password
+mongodb_swygate_password: random password
+mongodb_swyadmd_password: random password
+mongodb_s3_password: random password
+keystone_swyadmin_password: random password
+keystone_swyui_password: random password
+keystone_admin_password: random password
+rabbitmq_root_password: random password
+rabbitmq_s3_password: random password
+pgr_token: random password
+s3_token: random password
+s3_secret_key: AES secret
+mw_secpass: AES secret
+
+remote_host_ip: '%'
+
+# aws
+
+ec2_keypair: "ansible"
+ec2_instance_type: "t2.medium"
+ec2_image: "ami-005ca2b3c05cf85e2"
+ec2_region: "us-east-1"
+ec2_vpc_id: "vpc-2766af5c"
+
+# system
+
+physical_ip: "{{ ansible_eth0.ipv4.address }}"
+systemd_dir: /lib/systemd/system
+system_env_dir: /etc/sysconfig
+network_dir: /etc/kubernetes/network
+kubeadmin_config: /etc/kubernetes/admin.conf
+kube_addon_dir: /etc/kubernetes/addon
